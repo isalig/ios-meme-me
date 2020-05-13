@@ -57,6 +57,8 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         textField.defaultTextAttributes = memeTextAttributes
         textField.autocapitalizationType = .allCharacters
         textField.textAlignment = .center
+        textField.adjustsFontSizeToFitWidth = true
+        textField.sizeToFit()
         textField.text = text
     }
     
