@@ -34,8 +34,8 @@ class MemeTableViewController: UITableViewController, UICollectionViewDelegateFl
     }
     
     @objc func createMeme() {
-        let editorVc = self.storyboard!.instantiateViewController(withIdentifier: "MemeEditor") as! ViewController
-        self.navigationController?.pushViewController(editorVc, animated: true)
+        let editorVc = storyboard?.instantiateViewController(withIdentifier: "MemeEditor") as! MemeEditorViewController
+        navigationController?.pushViewController(editorVc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

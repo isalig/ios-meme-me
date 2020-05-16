@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  MemeMe
 //
 //  Created by Ischuk Alexander on 11.05.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate,
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -48,6 +48,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
         prepareViews()
         subscribeToKeyboardNotifications()
     }
@@ -63,6 +64,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromNotifications()
+        tabBarController?.tabBar.isHidden = false
     }
     
     func prepareTextField(_ textField: UITextField, _ text: String) {
@@ -190,7 +192,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     func updateToolbarsVisibility(visible: Bool) {
         toolbar.isHidden = !visible
-        navigationController?.isNavigationBarHidden = !visible
+        navigationController?.setNavigationBarHidden(!visible, animated: true)
     }
     
     func save(_ memedImage: UIImage) {

@@ -42,14 +42,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cYW-E3-vr6" userLabel="Meme Image">
-                                            <rect key="frame" x="8" y="8" width="130" height="116"/>
+                                            <rect key="frame" x="0.0" y="8" width="120" height="116"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="132" id="Nzh-8k-cpZ"/>
-                                                <constraint firstAttribute="width" constant="130" id="lf3-bf-xz2"/>
+                                                <constraint firstAttribute="height" constant="120" id="Nzh-8k-cpZ"/>
+                                                <constraint firstAttribute="width" constant="120" id="lf3-bf-xz2"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the meme for a friend" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUR-bi-0gm" userLabel="Meme Label">
-                                            <rect key="frame" x="154" y="0.0" width="244" height="132"/>
+                                            <rect key="frame" x="136" y="0.0" width="262" height="132"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                         <constraint firstAttribute="bottom" secondItem="cYW-E3-vr6" secondAttribute="bottom" constant="8" id="2k5-8W-sQj"/>
                                         <constraint firstAttribute="bottom" secondItem="HUR-bi-0gm" secondAttribute="bottom" id="5jI-rQ-8Dd"/>
                                         <constraint firstItem="HUR-bi-0gm" firstAttribute="leading" secondItem="cYW-E3-vr6" secondAttribute="trailing" constant="16" id="6vv-4g-kFI"/>
-                                        <constraint firstItem="cYW-E3-vr6" firstAttribute="leading" secondItem="03T-A9-Xo9" secondAttribute="leading" constant="8" id="73J-Rq-h9N"/>
+                                        <constraint firstItem="cYW-E3-vr6" firstAttribute="leading" secondItem="03T-A9-Xo9" secondAttribute="leading" id="73J-Rq-h9N"/>
                                         <constraint firstAttribute="trailing" secondItem="HUR-bi-0gm" secondAttribute="trailing" constant="16" id="Jln-cC-hLP"/>
                                         <constraint firstItem="HUR-bi-0gm" firstAttribute="top" secondItem="03T-A9-Xo9" secondAttribute="top" id="ZAc-50-JIf"/>
                                         <constraint firstItem="cYW-E3-vr6" firstAttribute="top" secondItem="03T-A9-Xo9" secondAttribute="top" constant="8" id="iaE-an-ydq"/>
@@ -95,7 +95,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-Pa-me1">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -201,7 +200,7 @@
         <!--Meme Editor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MemeEditor" id="BYZ-38-t0r" userLabel="Meme Editor" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeEditor" id="BYZ-38-t0r" userLabel="Meme Editor" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,19 +210,19 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <textField opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="EXC-h5-euQ">
-                                <rect key="frame" x="16" y="767.5" width="382" height="18.5"/>
+                                <rect key="frame" x="0.0" y="763" width="414" height="18.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-2W-4Nw">
-                                <rect key="frame" x="16" y="76" width="382" height="18.5"/>
+                                <rect key="frame" x="0.0" y="80.5" width="414" height="18.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xub-gi-34F" userLabel="Bottom Toolbar">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="FBr-KG-LuH"/>
+                                    <constraint firstAttribute="height" constant="44" id="tmj-U0-c3C"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Pick" id="ifM-Xb-KNk" userLabel="Pick">
@@ -247,19 +246,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EXC-h5-euQ" secondAttribute="trailing" constant="16" id="0Xk-fD-xZE"/>
-                            <constraint firstItem="xub-gi-34F" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1aa-Wl-Gx4"/>
-                            <constraint firstItem="5Dx-2W-4Nw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5fa-Ec-osl"/>
-                            <constraint firstItem="EXC-h5-euQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CLQ-Cp-nnb"/>
-                            <constraint firstItem="xub-gi-34F" firstAttribute="top" secondItem="H9e-NS-m6b" secondAttribute="bottom" id="EJA-Yu-aHq"/>
-                            <constraint firstItem="H9e-NS-m6b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FCX-89-Zy4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Dx-2W-4Nw" secondAttribute="trailing" constant="16" id="Gr6-Nd-VSC"/>
-                            <constraint firstItem="5Dx-2W-4Nw" firstAttribute="top" secondItem="H9e-NS-m6b" secondAttribute="top" constant="32" id="c8J-QH-ypA"/>
-                            <constraint firstItem="xub-gi-34F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fqg-Dj-XSh"/>
-                            <constraint firstItem="xub-gi-34F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h6L-QN-o1f"/>
-                            <constraint firstItem="H9e-NS-m6b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pTm-Yp-d3b"/>
-                            <constraint firstItem="H9e-NS-m6b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rEN-Nn-DWQ"/>
-                            <constraint firstItem="H9e-NS-m6b" firstAttribute="bottom" secondItem="EXC-h5-euQ" secondAttribute="bottom" constant="32" id="rbn-2p-SYh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xub-gi-34F" secondAttribute="trailing" id="07F-Xp-Xu4"/>
+                            <constraint firstItem="5Dx-2W-4Nw" firstAttribute="trailing" secondItem="H9e-NS-m6b" secondAttribute="trailing" id="1uh-WS-6Pp"/>
+                            <constraint firstItem="EXC-h5-euQ" firstAttribute="leading" secondItem="H9e-NS-m6b" secondAttribute="leading" id="2MW-BQ-gG9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9e-NS-m6b" secondAttribute="trailing" id="82H-ZZ-oVu"/>
+                            <constraint firstItem="EXC-h5-euQ" firstAttribute="trailing" secondItem="H9e-NS-m6b" secondAttribute="trailing" id="Dcm-Av-1ce"/>
+                            <constraint firstItem="xub-gi-34F" firstAttribute="top" secondItem="H9e-NS-m6b" secondAttribute="bottom" id="HLp-tv-msS"/>
+                            <constraint firstItem="H9e-NS-m6b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lyn-q2-Koh"/>
+                            <constraint firstItem="5Dx-2W-4Nw" firstAttribute="leading" secondItem="H9e-NS-m6b" secondAttribute="leading" id="cYE-Yv-tgC"/>
+                            <constraint firstItem="H9e-NS-m6b" firstAttribute="top" secondItem="5Dx-2W-4Nw" secondAttribute="bottom" constant="-55" id="kBA-8P-JTs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xub-gi-34F" secondAttribute="bottom" id="loa-3P-Be7"/>
+                            <constraint firstItem="xub-gi-34F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xva-GN-ozU"/>
+                            <constraint firstItem="H9e-NS-m6b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yCz-FR-SkF"/>
+                            <constraint firstItem="EXC-h5-euQ" firstAttribute="top" secondItem="H9e-NS-m6b" secondAttribute="bottom" constant="-55" id="z4X-YL-1pn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
