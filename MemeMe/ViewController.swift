@@ -12,7 +12,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
@@ -32,6 +31,20 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSAttributedString.Key.strokeWidth:  -2.0
     ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Cancel",
+            style: .plain,
+            target: self,
+            action: #selector(onCancelClick)
+        )
+    }
+    
+    @objc func onCancelClick() {
+        clear()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -152,10 +165,6 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return true;
     }
     
-    @IBAction func onCancelClick(_ sender: Any) {
-        clear()
-    }
-    
     @IBAction func onShareClick(_ sender: Any) {
         let memedImage = generateMemedImage()
         let shareVc = UIActivityViewController.init(activityItems: [memedImage], applicationActivities: nil)
@@ -181,16 +190,19 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     func updateToolbarsVisibility(visible: Bool) {
         toolbar.isHidden = !visible
-        topToolbar.isHidden = !visible
+        navigationController?.isNavigationBarHidden = !visible
     }
     
     func save(_ memedImage: UIImage) {
-          let meme = Meme(
-                  topText: topTextView.text!,
-                  bottomText: bottomTextView.text!,
-                  originalImage: imageView.image!,
-                  memedImage: generateMemedImage()
-          )
-          print("Saved meme: \(meme)")
+        let meme = Meme(
+            topText: topTextView.text!,
+            bottomText: bottomTextView.text!,
+            originalImage: imageView.image!,
+            memedImage: generateMemedImage()
+        )
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        navigationController?.popViewController(animated: true)
       }
 }

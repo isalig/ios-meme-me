@@ -14,6 +14,11 @@
 		D02FD6E12468B42800877C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02FD6E02468B42800877C67 /* Assets.xcassets */; };
 		D02FD6E42468B42800877C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02FD6E22468B42800877C67 /* LaunchScreen.storyboard */; };
 		D02FD6EE2469FE0800877C67 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FD6ED2469FE0800877C67 /* Meme.swift */; };
+		D07088FE246DFDAB0026C8F7 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07088FD246DFDAB0026C8F7 /* MemeTableViewController.swift */; };
+		D0708900246E028C0026C8F7 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07088FF246E028C0026C8F7 /* MemeTableViewCell.swift */; };
+		D0FE9819246F276B00736E49 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE9818246F276B00736E49 /* MemeCollectionViewController.swift */; };
+		D0FE981B246F278F00736E49 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE981A246F278F00736E49 /* MemeCollectionViewCell.swift */; };
+		D0FE981F24706B0A00736E49 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE981E24706B0A00736E49 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		D02FD6E32468B42800877C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02FD6E52468B42800877C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02FD6ED2469FE0800877C67 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		D07088FD246DFDAB0026C8F7 /* MemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		D07088FF246E028C0026C8F7 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		D0FE9818246F276B00736E49 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
+		D0FE981A246F278F00736E49 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0FE981E24706B0A00736E49 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,11 @@
 				D02FD6E22468B42800877C67 /* LaunchScreen.storyboard */,
 				D02FD6E52468B42800877C67 /* Info.plist */,
 				D02FD6ED2469FE0800877C67 /* Meme.swift */,
+				D07088FD246DFDAB0026C8F7 /* MemeTableViewController.swift */,
+				D07088FF246E028C0026C8F7 /* MemeTableViewCell.swift */,
+				D0FE9818246F276B00736E49 /* MemeCollectionViewController.swift */,
+				D0FE981A246F278F00736E49 /* MemeCollectionViewCell.swift */,
+				D0FE981E24706B0A00736E49 /* DetailsViewController.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -143,7 +158,12 @@
 			files = (
 				D02FD6DC2468B42600877C67 /* ViewController.swift in Sources */,
 				D02FD6EE2469FE0800877C67 /* Meme.swift in Sources */,
+				D0FE981F24706B0A00736E49 /* DetailsViewController.swift in Sources */,
+				D0FE981B246F278F00736E49 /* MemeCollectionViewCell.swift in Sources */,
 				D02FD6D82468B42600877C67 /* AppDelegate.swift in Sources */,
+				D0708900246E028C0026C8F7 /* MemeTableViewCell.swift in Sources */,
+				D0FE9819246F276B00736E49 /* MemeCollectionViewController.swift in Sources */,
+				D07088FE246DFDAB0026C8F7 /* MemeTableViewController.swift in Sources */,
 				D02FD6DA2468B42600877C67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
